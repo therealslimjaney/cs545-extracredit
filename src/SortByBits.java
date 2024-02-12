@@ -15,7 +15,7 @@ public class SortByBits {
     public static void quickSort(int[] array, int lowIndex, int highIndex) {
 
         // Check for base case
-        if (lowIndex == highIndex) {
+        if (lowIndex >= highIndex) {
             return;
         }
 
@@ -32,11 +32,10 @@ public class SortByBits {
             while (leftPointer <= rightPointer && Integer.bitCount(array[leftPointer]) <= pivotBits && array[leftPointer] <= pivot) {
                 leftPointer++;
             }
-
-            while (rightPointer >= leftPointer && Integer.bitCount(array[rightPointer]) >= pivotBits && array[rightPointer] <= pivot) {
+            while (rightPointer >= leftPointer && Integer.bitCount(array[rightPointer]) >= pivotBits && array[rightPointer] >= pivot) {
                 rightPointer--;
             }
-            if (leftPointer <= rightPointer) {
+            if (leftPointer < rightPointer) {
                 swap(array, leftPointer, rightPointer);
                 leftPointer++;
                 rightPointer--;
