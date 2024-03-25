@@ -6,7 +6,6 @@
 
 // I'm sorting using a variation of quickSort (pivot is last element)
 
-// I have the bits logic, now I must put in the integer logic
 
 import java.lang.Integer;
 
