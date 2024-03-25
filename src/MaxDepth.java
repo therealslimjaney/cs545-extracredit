@@ -1,3 +1,5 @@
+//Given the root of a binary tree, return its maximum depth.
+
 public class MaxDepth {
 
 
@@ -6,7 +8,7 @@ public class MaxDepth {
         Node left;
         Node right;
 
-        Node(int x) {
+        private Node(int x) {
             data = x;
         }
     }
@@ -34,4 +36,5 @@ public class MaxDepth {
         int depth = maxDepth(root);
         System.out.println("Max depth: " + depth);
     }
+
 }
